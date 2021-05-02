@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html class=info>
     <link rel="stylesheet" type="text/css" href="styles.css">
@@ -6,30 +8,94 @@
     <title>Info</title>
 
     <head>
-        <div class = "topbar">
-            <a href="main.html" rel="noopener noreferrer">
-                <img id="Logo" src="scamguardian.png" alt="Logo">
-            </a>
-            <a href="browse.html" rel="noopener noreferrer">
-                <h1 id = "Open">Browse</h1>
-            </a>
-            <h1 id = "split">|</h1>
-            <a href="info.html" rel="noopener noreferrer">
-                <h1 id = "Steps">Steps</h1>
-            </a>
-            <h1 id = "split">|</h1>
-            <a href="reviews.html" rel="noopener noreferrer">
-                <h1 id = "Reviews">Reviews</h1>
-            </a>
-        </div>
-
+        <body>
+            <div class = "topbar">
+                <a href="main.html" rel="noopener noreferrer">
+                    <img id="Logo" src="scamguardian.png" alt="Logo">
+                </a>
+                <a href="browse.html" rel="noopener noreferrer">
+                    <h1 id = "Open">Browse</h1>
+                </a>
+                <h1 id = "split">|</h1>
+                <a href="info.html" rel="noopener noreferrer">
+                    <h1 id = "Steps">Steps</h1>
+                </a>
+                <h1 id = "split">|</h1>
+                <a href="reviews.html" rel="noopener noreferrer">
+                    <h1 id = "Reviews">Reviews</h1>
+                </a>
+            </div>
+        </body>
         <h1 id="BrowseHead">Browse available Scam Guardians</h1>
 
-        <div class="subbar">
-            
-
+        <div class="guardians">
+            <img id=rate src="fourhalf.png">
+            <p id = desc><strong>UNPAID TO BERNIE OFFICIARY</strong>  [4.5 out of 5 from 2,132 users]</br></br>
+                
+                        <i>Description: An outstanding bill of $300 must be payed in 24 hours</i>
+            </p>
+            <img id=guardianIcon class=bernieText src="text.png" onclick="myFunction(this.className)"/>
+            <img id=guardianIcon class=bernieEmail src="email.png" onclick="myFunction(this.className)"/>
             
         </div>
 
+        </br></br>
+
+        <div class="guardians">
+            <img id=rate src="four.png">
+            <p id = desc><strong>FLASH SALE</strong>  [4 out of 5 from 1,202 users]</br></br>
+                
+                        <i>Description: 90% off designer clothing today only</i>
+            </p>
+
+            <img id=guardianIcon class=flashText src="text.png" onclick="myFunction(this.className)"/>
+            <img id=guardianIcon class=flashEmail src="email.png" onclick="myFunction(this.className)"/>
+        </div>
+
+        </br></br>
+
+        <div class="guardians">
+            <img id=rate src="four.png">
+            <p id = desc><strong>DATA OVERAGE</strong>  [4 out of 5 from 2,301 users]</br></br>
+                
+                        <i>Description: You have used an extra 10GB of data this month!</i>
+            </p>
+
+            <img id=guardianIcon class=dataText src="text.png" onclick="myFunction(this.className)"/>
+            <img id=guardianIcon class=dataEmail src="email.png" onclick="myFunction(this.className)"/>
+        </div>
+
+        </br></br>
+
+        <div class="guardians">
+            <img id=rate src="threehalf.png">
+            <p id = desc><strong>AMAZ0N</strong>  [3.5 out of 5 from 592 users]</br></br>
+                
+                        <i>Description: You owe AMAZ0N $400 for an electric scooter</i>
+            </p>
+
+            <img id=guardianIcon class=AMAZ0NText src="text.png" onclick="myFunction(this.className)"/>
+            <img id=guardianIcon class=AMAZ0NEmail src="email.png" onclick="myFunction(this.className)"/>
+        </div>
+
+        </br></br>
+
     </head>
+
+    <script>
+        function myFunction(name) {
+            console.log(name.substring(name.length-4, name.length-1));
+            if (name.substring(name.length-4, name.length) == "Text"){
+                sessionStorage.setItem('nameOfGuardian', name);
+                window.open("textGuardian.html");
+            }
+
+            else if (name.substring(name.length-5, name.length) == "Email") {
+                sessionStorage.setItem('nameOfGuardian', name);
+                window.open("emailGuardian.html");
+            }
+            
+        };
+
+    </script>
 </html>

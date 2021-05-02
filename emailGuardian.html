@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class=info>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href=shield.png>
+
+    <title>Send Email</title>
+
+    <head>
+        <body>
+            <div class = "topbar">
+                <a href="main.html" rel="noopener noreferrer">
+                    <img id="Logo" src="scamguardian.png" alt="Logo">
+                </a>
+                <a href="browse.html" rel="noopener noreferrer">
+                    <h1 id = "Browse">Browse</h1>
+                </a>
+                <h1 id = "split">|</h1>
+                <a href="info.html" rel="noopener noreferrer">
+                    <h1 id = "Steps">Steps</h1>
+                </a>
+                <h1 id = "split">|</h1>
+                <a href="reviews.html" rel="noopener noreferrer">
+                    <h1 id = "Reviews">Reviews</h1>
+                </a>
+            </div>
+        </body>
+
+        <h1 id="BrowseHead">Send the Guardian via Email</h1>
+
+        <p>To: </p>
+        <input type="text" placeholder="Name">
+        <p></p>
+
+    <script>
+        nameOfGuardian = sessionStorage.getItem("nameOfGuardian");
+        if (nameOfGuardian == "bernieEmail") {
+            document.getElementById("BrowseHead").innerHTML = "Send <i>UNPAID TO BERNIE OFFICIARY</i> </br> via Email";
+
+        }
+    </script>
