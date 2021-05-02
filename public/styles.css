@@ -139,7 +139,7 @@ a {
     padding-right: 2%;
 }
 
-.guardians{
+.guardians {
     animation-name: fadein;
     animation-duration: 2.5s;
     animation-fill-mode: forwards;
@@ -166,49 +166,12 @@ a {
     display: inline;
 }
 
-
-#emailText, #miscData {
-    padding-left: 5%;
-    color:black;
-    text-align: left;
-    font-size: 1.6vw;
-    font-family:"bahn";
-    display: block;
-}
-
-#emailText{
-    font-size: 1.3vw;
-    padding-left: 7%;
-}
-
-#toName, #toEmail, #toPhone {
-    margin-left: 7%;
-    color:black;
-    text-align: left;
-    font-size: 1.3vw;
-    font-family:"bahn";
-    display: block;
-}
-
 #guardianIcon {
     width:6%;
     display: inline;
     margin-right: 5%;
     float: right;
 }
-
-#Send {
-    font-size: 3vw;
-    font-family:"bahn";
-    text-align: center;
-    background-color: aliceblue;
-    padding: 3%;
-    margin-left: 32%;
-    border-radius: 2%;
-    display:inline-block;
-    float: center;
-}
-
 
 .topbar #Logo:hover {
     background-color: rgb(223, 221, 221);
@@ -218,7 +181,7 @@ a {
     animation-fill-mode: forwards;
 }
 
-.topbar #Browse:hover, #Steps:hover, #Reviews:hover{
+.topbar #Browse:hover, #Steps:hover, #Reviews:hover {
     animation-name: hoversmall;
     background-color: rgb(223, 221, 221);
     animation-duration: 0.25s;
@@ -240,8 +203,4 @@ a {
     animation-duration: 0.25s;
     animation-direction: forwards;
     animation-fill-mode: forwards;
-}
-
-#Send:hover {
-    background-color: rgb(223, 221, 221);
 }

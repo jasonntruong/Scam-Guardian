@@ -3,7 +3,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="icon" href=shield.png>
 
-    <title>Send Text</title>
+    <title>Send Email</title>
 
     <head>
         <body>
@@ -26,3 +26,59 @@
         </body>
 
         <h1 id="BrowseHead">Send the Guardian via Text</h1>
+
+        <p id="miscData"><strong>To:</strong>&nbsp;&nbsp;&nbsp;&nbsp;Please enter the following information</p>
+        <input id="toName" type="text" placeholder="Name">
+        <input id="toPhone" type="text" placeholder="+16471324451">
+
+    </br>
+
+        <p id="miscData"><strong>Text:</strong>&nbsp;&nbsp;&nbsp;&nbsp;The text message to be sent</p>
+        <p id="emailText"></p>
+
+    </br>
+    </br>
+
+        <h1 id="Send" onclick="sendText()" h1>Send Scam Guardian!</h1>
+
+    <script>
+        nameOfGuardian = sessionStorage.getItem("nameOfGuardian");
+        if (nameOfGuardian == "bernieText") {
+            document.getElementById("BrowseHead").innerHTML = "Send <i>UNPAID TO BERNIE OFFICIARY</i> </br> via Text";
+            document.getElementById("emailText").innerHTML = "[NAME],</br></br>It has been brought to our attention that you have an outstanding bill of $300.00!</br></br>You must pay this bill at the link below in 24 hours!</br></br>Failure to do so will result in an increase of $500 to your bill resulting in you owing Bernie Officiary a total of $800.00!</br></br>Complete ASAP or else,</br></br>Bernie Officiary";
+            subject = "UNPAID $300 TO BERNIE OFFICIARY";
+            message = "[NAME],   It has been brought to our attention that you have an outstanding bill of $300.00!   You must pay this bill at the link below in 24 hours!   Failure to do so will result in an increase of $500 to your bill resulting in you owing Bernie Officiary a total of $800.00!   Complete ASAP or else, Bernie Officiary   Pay here: ";
+
+        }
+
+        else if (nameOfGuardian == "flashText") {
+            document.getElementById("BrowseHead").innerHTML = "Send <i>FLASH SALE</i> </br> via Text";
+            document.getElementById("emailText").innerHTML = "[NAME]</br></br>DO NOT MISS OUT ON OUR 90% OFF CLEARANCE SALE!</br></br>TODAY ONLY, WE ARE SELLING ALL DESIGNER CLOTHING FOR 90% OFF!</br></br>ACT NOW OR REGRET IT FOREVER → [LINK]";
+            subject= "FLASH SALE";
+            message = "[NAME],   DO NOT MISS OUT ON OUR 90% OFF CLEARANCE SALE!   TODAY ONLY, WE ARE SELLING ALL DESIGNER CLOTHING FOR 90% OFF!   ACT NOW OR REGRET IT FOREVER   CHECK IT OUT HERE: ";
+        }
+
+        else if (nameOfGuardian == "dataText") {
+            document.getElementById("BrowseHead").innerHTML = "Send <i>DATA OVERAGE</i> </br> via Text";
+            document.getElementById("emailText").innerHTML = "[NAME],</br></br>You have gone over ALL OF YOUR AVAILABLE INTERNET for this month’s period.</br></br>You have used up an extra 10GB’s, or an additional $200!</br></br>Please pay your bill here before further charges are added: LINK";
+            subject = "OVERDUE INTERNET BILL";
+            message="[NAME],/nYou have gone over ALL OF YOUR AVAILABLE INTERNET for this month’s period./nYou have used up an extra 10GB’s, or an additional $200!/nPlease pay your bill here before further charges are added: ";
+        }
+
+        else if (nameOfGuardian == "AMAZ0NText") {
+            document.getElementById("BrowseHead").innerHTML = "Send <i>AMAZ0N</i> </br> via Text";
+            document.getElementById("emailText").innerHTML = "[NAME],</br></br>This is AMAZ0N here. We wanted to notify you that you owe us $400 for the electric scooter you ordered.</br></br>To pay your bill, or complain if you did not order this, please go to this link: [LINK]";
+            subject = "AMAZ0N FEES"
+            message = "[NAME],/nThis is AMAZ0N here. We wanted to notify you that you owe us $400 for the electric scooter you ordered./nTo pay your bill, or complain if you did not order this, please go to this link: ";
+        }
+
+        function sendText() {
+            name = document.getElementById("toName").value;
+            phone = document.getElementById("toPhone").value;
+            if (name != "" && phone != ""){
+                message = name + message.substring(6);
+                LINK = "http://localhost:8080/caughtUser.html"
+                window.open("browse.html");
+            }
+        }
+    </script>

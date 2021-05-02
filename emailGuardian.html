@@ -27,14 +27,59 @@
 
         <h1 id="BrowseHead">Send the Guardian via Email</h1>
 
-        <p>To: </p>
-        <input type="text" placeholder="Name">
-        <p></p>
+        <p id="miscData"><strong>To:</strong>&nbsp;&nbsp;&nbsp;&nbsp;Please enter the following information</p>
+        <input id="toName" type="text" placeholder="Name">
+        <input id="toEmail" type="text" placeholder="Email">
+
+    </br>
+
+        <p id="miscData"><strong>Email:</strong>&nbsp;&nbsp;&nbsp;&nbsp;The email to be sent</p>
+        <p id="emailText"></p>
+
+    </br>
+    </br>
+    <h1 id="Send" h1 onclick="sendEmail()">Send Scam Guardian!</h1>
 
     <script>
         nameOfGuardian = sessionStorage.getItem("nameOfGuardian");
         if (nameOfGuardian == "bernieEmail") {
             document.getElementById("BrowseHead").innerHTML = "Send <i>UNPAID TO BERNIE OFFICIARY</i> </br> via Email";
+            document.getElementById("emailText").innerHTML = "[NAME],</br></br>It has been brought to our attention that you have an outstanding bill of $300.00!</br></br>You must pay this bill at the link below in 24 hours!</br></br>Failure to do so will result in an increase of $500 to your bill resulting in you owing Bernie Officiary a total of $800.00!</br></br>Complete ASAP or else,</br></br>Bernie Officiary";
+            subject = "UNPAID $300 TO BERNIE OFFICIARY";
+            message = "[NAME],   It has been brought to our attention that you have an outstanding bill of $300.00!   You must pay this bill at the link below in 24 hours!   Failure to do so will result in an increase of $500 to your bill resulting in you owing Bernie Officiary a total of $800.00!   Complete ASAP or else, Bernie Officiary   Pay here: ";
 
+        }
+
+        else if (nameOfGuardian == "flashEmail") {
+            document.getElementById("BrowseHead").innerHTML = "Send <i>FLASH SALE</i> </br> via Email";
+            document.getElementById("emailText").innerHTML = "[NAME]</br></br>DO NOT MISS OUT ON OUR 90% OFF CLEARANCE SALE!</br></br>TODAY ONLY, WE ARE SELLING ALL DESIGNER CLOTHING FOR 90% OFF!</br></br>ACT NOW OR REGRET IT FOREVER → [LINK]";
+            subject= "FLASH SALE";
+            message = "[NAME],   DO NOT MISS OUT ON OUR 90% OFF CLEARANCE SALE!   TODAY ONLY, WE ARE SELLING ALL DESIGNER CLOTHING FOR 90% OFF!   ACT NOW OR REGRET IT FOREVER   CHECK IT OUT HERE: ";
+        }
+
+        else if (nameOfGuardian == "dataEmail") {
+            document.getElementById("BrowseHead").innerHTML = "Send <i>DATA OVERAGE</i> </br> via Email";
+            document.getElementById("emailText").innerHTML = "[NAME],</br></br>You have gone over ALL OF YOUR AVAILABLE INTERNET for this month’s period.</br></br>You have used up an extra 10GB’s, or an additional $200!</br></br>Please pay your bill here before further charges are added: LINK";
+            subject = "OVERDUE INTERNET BILL";
+            message="[NAME],You have gone over ALL OF YOUR AVAILABLE INTERNET for this month’s period.   You have used up an extra 10GB’s, or an additional $200!   Please pay your bill here before further charges are added: ";
+        }
+
+        else if (nameOfGuardian == "AMAZ0NEmail") {
+            document.getElementById("BrowseHead").innerHTML = "Send <i>AMAZ0N</i> </br> via Email";
+            document.getElementById("emailText").innerHTML = "[NAME],</br></br>This is AMAZ0N here. We wanted to notify you that you owe us $400 for the electric scooter you ordered.</br></br>To pay your bill, or complain if you did not order this, please go to this link: [LINK]";
+            subject = "AMAZ0N FEES"
+            message = "[NAME],   This is AMAZ0N here. We wanted to notify you that you owe us $400 for the electric scooter you ordered.   To pay your bill, or complain if you did not order this, please go to this link: ";
+        }
+
+        function sendEmail() {
+            name = document.getElementById("toName").value;
+            email = document.getElementById("toEmail").value;
+            if (name != "" && email != "" && message != null){
+                message = name + message.substring(6);
+                LINK = "http://localhost:8080/caughtUser.html"
+                newWindow = window.open("https://api.elasticemail.com/v2/email/send?apikey=3D4073FA8B351254CE5D48C80DC352116A5352F21AA8D5F728D335CC9473A5F64CE8A0AC443942375F34EBDDE0FC6227&subject="+subject+"&from=scamguardian2020@gmail.com&msgTo="+email+"&bodyText="+message+" " + LINK);
+                newWindow.close();
+                window.open("browse.html");
+            }
         }
     </script>
