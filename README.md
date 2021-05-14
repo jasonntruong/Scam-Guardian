@@ -1,4 +1,4 @@
-My hack for RU Hacks 2021, Scam Guardian
+**My hack for RU Hacks 2021, Scam Guardian**
 
 Devpost: https://devpost.com/software/scam-guardian
 
