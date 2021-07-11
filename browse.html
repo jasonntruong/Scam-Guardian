@@ -1,38 +1,43 @@
-
-
 <!DOCTYPE html>
 <html class=info>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="icon" href=shield.png>
-
-    <title>Info</title>
 
     <head>
-        <body>
-            <div class = "topbar">
-                <a href="main.html" rel="noopener noreferrer">
-                    <img id="Logo" src="scamguardian.png" alt="Logo">
-                </a>
-                <a href="browse.html" rel="noopener noreferrer">
-                    <h1 id = "Open">Browse</h1>
-                </a>
-                <h1 id = "split">|</h1>
-                <a href="info.html" rel="noopener noreferrer">
-                    <h1 id = "Steps">Steps</h1>
-                </a>
-                <h1 id = "split">|</h1>
-                <a href="reviews.html" rel="noopener noreferrer">
-                    <h1 id = "Reviews">Reviews</h1>
-                </a>
-            </div>
-        </body>
-        <h1 id="BrowseHead">Browse available Scam Guardians</h1>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="browseStyles.css">
+        <link rel="icon" href=shield.png>
+
+        <title>Browse</title>
+    </head>
+
+    <body>
+        <div class = "topbar">
+            <a href="main.html" rel="noopener noreferrer">
+                <img id="Logo" src="scamguardian.png" alt="Logo">
+            </a>
+
+            <a href="browse.html" rel="noopener noreferrer">
+                <h1 id="Open">Browse</h1>
+            </a>
+
+            <h2>|</h2>
+
+            <a href="steps.html" rel="noopener noreferrer">
+                <h1>Steps</h1>
+            </a>
+
+            <h2>|</h2>
+
+            <a href="reviews.html" rel="noopener noreferrer">
+                <h1>Reviews</h1>
+            </a>
+        </div>
+    
+        <h1>Browse available Scam Guardians</h1>
 
         <div class="guardians">
             <img id=rate src="fourhalf.png">
             <p id = desc><strong>UNPAID TO BERNIE OFFICIARY</strong>  [4.5 out of 5 from 2,132 users]</br></br>
-                
-                        <i>Description: An outstanding bill of $300 must be payed in 24 hours</i>
+                <i>Description: An outstanding bill of $300 must be payed in 24 hours</i>
             </p>
             <img id=guardianIcon class=bernieText src="text.png" onclick="myFunction(this.className)"/>
             <img id=guardianIcon class=bernieEmail src="email.png" onclick="myFunction(this.className)"/>
@@ -44,8 +49,7 @@
         <div class="guardians">
             <img id=rate src="four.png">
             <p id = desc><strong>FLASH SALE</strong>  [4 out of 5 from 1,202 users]</br></br>
-                
-                        <i>Description: 90% off designer clothing today only</i>
+                <i>Description: 90% off designer clothing today only</i>
             </p>
 
             <img id=guardianIcon class=flashText src="text.png" onclick="myFunction(this.className)"/>
@@ -57,8 +61,7 @@
         <div class="guardians">
             <img id=rate src="four.png">
             <p id = desc><strong>DATA OVERAGE</strong>  [4 out of 5 from 2,301 users]</br></br>
-                
-                        <i>Description: You have used an extra 10GB of data this month!</i>
+                <i>Description: You have used an extra 10GB of data this month!</i>
             </p>
 
             <img id=guardianIcon class=dataText src="text.png" onclick="myFunction(this.className)"/>
@@ -70,8 +73,7 @@
         <div class="guardians">
             <img id=rate src="threehalf.png">
             <p id = desc><strong>AMAZ0N</strong>  [3.5 out of 5 from 592 users]</br></br>
-                
-                        <i>Description: You owe AMAZ0N $400 for an electric scooter</i>
+                <i>Description: You owe AMAZ0N $400 for an electric scooter</i>
             </p>
 
             <img id=guardianIcon class=AMAZ0NText src="text.png" onclick="myFunction(this.className)"/>
@@ -80,7 +82,8 @@
 
         </br></br>
 
-    </head>
+    </body>
+
 
     <script>
         function myFunction(name) {
@@ -96,6 +99,5 @@
             }
             
         };
-
     </script>
 </html>

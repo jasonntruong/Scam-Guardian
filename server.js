@@ -14,12 +14,16 @@ app.get('/browse.html', (req, res) => {
   res.sendFile(__dirname + '/browse.html');
 });
 
-app.get('/browse.html', (req, res) => {
-    res.sendFile(__dirname + '/browse.html');
+app.get('/steps.html', (req, res) => {
+    res.sendFile(__dirname + '/steps.html');
   });
 
 app.get('/reviews.html', (req, res) => {
     res.sendFile(__dirname + '/reviews.html');
+});
+
+app.get('/caught.html', (req, res) => {
+  res.sendFile(__dirname + '/caughtUser.html');
 });
 
 const server = app.listen(8080, () => {
